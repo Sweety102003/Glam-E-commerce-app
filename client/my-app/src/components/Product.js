@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./product.css"
 import { FaRegHeart } from "react-icons/fa6";
 import { useParams } from 'react-router-dom';
 export default function Product() {
   const [data, setdata] = useState([]);
   const { query } = useParams();
-  fetch(`http://localhost:5000/product?q=${query}`).then(res => res.json()).then(data => setdata(data)).catch(err => console.log(err));
+  useEffect(()=>{
+    fetch(`http://localhost:5000/product?q=${query}`).then(res => res.json()).then(data => setdata(data)).catch(err => console.log(err));
+  },[query])
+  
 
   const postdata = (productid) => {
     fetch("http://localhost:5000/addtocart", {

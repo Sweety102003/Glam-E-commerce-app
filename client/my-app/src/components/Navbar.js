@@ -5,7 +5,6 @@ import logo from "../images/LOGO.jpg";
 import { FaRegHeart } from "react-icons/fa6";
 import { FiMenu } from "react-icons/fi";
 import { ImCross } from "react-icons/im";
-import { CiSearch } from "react-icons/ci";
 import { FaShoppingCart } from "react-icons/fa";
 import { logincontext } from "../context/logincontext";
 import { CgAddR } from "react-icons/cg";
@@ -48,7 +47,7 @@ export default function Navbar() {
       <div className="searcho"> <input type="search" name="search" id="search"
         onKeyPress={(e) => {
           if (e.key === "Enter") {handleSearch();
-       
+            setquery("");
           }
         }} value={query} onChange={(e) => { setquery(e.target.value) }}
         className="search-input" placeholder="Search for item" />

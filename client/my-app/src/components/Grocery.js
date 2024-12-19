@@ -13,7 +13,7 @@ function Grocery() {
       // console.log(posts);
       setData(posts)
     }).catch(err => console.log(err))
-  }, [])
+  }, [category])
 
   const postdata = (productid) => {
     // console.log(productid);

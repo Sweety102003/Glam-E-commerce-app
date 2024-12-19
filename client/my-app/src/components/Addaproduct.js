@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import "./Addproduct.css"
-import image1 from "../images/image.png"
 import { toast } from 'react-toastify';
 export default function Addaproduct() {
     const [body, setBody] = useState();
@@ -9,13 +8,10 @@ export default function Addaproduct() {
     const [category, setCategory] = useState();
     const [image, setImage] = useState();
     const [pic, setPic] = useState();
-    const [url, setUrl] = useState();
     const notifyA = (message) => {
         toast.success(message);
     }
-    const notifyb = (message) => {
-        toast.error(message);
-    }
+   
     const loadfile = (event) => {
         setPic(URL.createObjectURL(event.target.files[0]));
         setImage(event.target.files[0]);
@@ -69,7 +65,7 @@ export default function Addaproduct() {
         <div className='main2' >
             <div>
                 <h1 style={{ textAlign: "center",color:"purple", fontWeight:"bolder", fontStyle:"italic" }} >Add a product</h1>
-                <img style={{ height: "200px", width: "100%" }} src={pic} className='productimage'></img>
+                <img style={{ height: "200px", width: "100%" }} src={pic}  alt="product" className='productimage'></img>
                 <input type="file"  accept='image/*' onChange={loadfile}></input>
             </div>
             <div className=" box" >

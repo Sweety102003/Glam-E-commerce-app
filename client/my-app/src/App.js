@@ -2,7 +2,7 @@
 import './App.css';
 import Cards from './components/Cards';
 import Navbar from './components/Navbar';
-import { BrowserRouter, Route, Routes, useParams } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { SliderData } from './components/SliderData';
 import Categorycard from './components/Categorycard';
 import Signin from './components/Signin';
@@ -19,7 +19,6 @@ import Grocery from './components/Grocery';
 import Profile from './components/Profile';
 import Product from './components/Product';
 function App() {
-  const { category } = useParams();
   const [modalopen, setmodalopen] = useState(false);
   useEffect(() => {
   }, [])
