@@ -48,7 +48,7 @@ export default function Navbar() {
       <div className="searcho"> <input type="search" name="search" id="search"
         onKeyPress={(e) => {
           if (e.key === "Enter") {handleSearch();
-            setquery("");
+       
           }
         }} value={query} onChange={(e) => { setquery(e.target.value) }}
         className="search-input" placeholder="Search for item" />
