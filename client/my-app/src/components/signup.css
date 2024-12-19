@@ -1,0 +1,81 @@
+#signuphead{
+    font-size: 35px;
+    padding: 8px;
+    margin:8px ;
+    font-family:cursive ;
+    text-align: center;
+
+}
+.signUp{
+    background-size: cover;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: fit-content;
+    margin-top: 10px;
+
+    
+}
+
+.form{
+    background-color: #fff;
+    padding: 24px;
+    border: 1px solid rgb(129, 121, 121);
+    border-radius: 1px;
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+
+
+.loginPara{
+    color: rgba(var(--f52,142,142,142),1);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    margin: 0px 40px 20px 40px;
+    text-align: center;
+}
+input{
+    padding: 4px;
+    margin: 3px auto;
+    display: block;
+    /* outline: none; */
+    font-size: 16px;
+    width: 80%;
+    box-sizing: border-box;
+}
+.form2{
+    background-color: #fff;
+    padding: 15px;
+    margin-top: 4px;
+    border: 1px solid rgb(129, 121, 121);
+    border-radius: 1px;
+
+}
+.form > div{
+    width: 80%;
+    margin: auto;
+}
+
+#submit-btn{
+    background-color:#e7b9b9 ;
+    border: none;
+    border-radius: 3px;
+    /* color: whit; */
+    font-weight: bold;
+    padding: 5px 10px;
+    width: 80%;
+    margin: auto;
+    cursor: pointer;
+    margin-top: 8px;
+    
+}
+
+

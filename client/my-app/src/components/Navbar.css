@@ -1,0 +1,154 @@
+.navb{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-decoration: none;
+    height: 12vh;
+    width:100vw;
+    z-index: 32;
+    /* background-color: rgb(216, 198, 174); */
+    z-index: 57;
+    position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: #e7b9b9;
+
+
+}
+
+.item  {
+    list-style: none;
+    text-decoration: none !important;
+
+    padding: 12px;
+    /* margin:11px; */
+    margin: auto;
+    font-weight: bold;
+    font-style: italic;
+    
+}
+.item4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+/* color:white; */
+text-decoration: none !important;
+/* font-display: u; */
+    /* color:purple; */
+}
+ li{
+    text-decoration: none !important;
+    /* text-underline:none; */
+    color: rgb(12, 11, 11);
+
+
+    /* margin: auto; */
+}
+.logo{
+    height:17vh;
+    width: 20vw;
+
+}
+.search-input{
+    display: inline-block;
+    position: relative;
+    width: 50vw;
+    padding: 4 px;
+    /* margin:12 px; */
+    margin: auto;
+    height: 9vh;
+    border: none;
+    top:8px;
+    left:14px;
+    align-items: center;
+    border-radius: 4px;
+    margin: auto;
+}
+.searcho{
+    
+    width:34%;
+}
+.item3
+{
+    display:none;
+}
+.navb2{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-decoration: none !important;
+    
+    position:absolute;
+    right:1px;
+    width:23%;
+    padding:4px;
+    top:7px;
+}
+/* .navb3{
+    display:none;
+} */
+.show{
+    display:none;
+}
+.sidebar{
+    display:none;
+}
+
+@media(max-width:1180px)
+{
+    .hide{
+        display:none;
+
+    }
+    .show{
+        display: inline-block;
+        right: 8px;
+    }
+    .item2{
+        display: flex;
+    }
+    .navb2{
+        display:flex;
+        flex-direction: column;
+        text-decoration: none !important;
+        
+        position:absolute;
+        right:1px;
+        width:23%;
+        padding:4px;
+        top:7px;
+
+    }
+
+    .sidebar{
+        height:fit-content;
+        width:350px;
+z-index:55;
+position: absolute;
+        display:flex ;
+        flex-direction:column;
+background-color:#e7b9b9 ;
+color: white;
+font-style: italic;
+font-weight: bold;
+margin-top: 5px;
+box-shadow: #dd9d9d;
+
+margin-right: 0px;
+right:0px;
+
+
+
+    }
+    .item4{
+        display: none;
+    }
+    .sidebar li{
+        display: block;
+        text-align: center;
+
+    }
+   .main{display:none;}
+    
+}
