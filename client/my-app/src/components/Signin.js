@@ -24,11 +24,15 @@ function Signin() {
         password:password
       })
     }).then(res=>res.json()).then(
-      data=>{console.log(data.data);
+      data=>{
+        if(data.error){
+          notifyA(data.error)
+        }else{
+        console.log(data.data);
         localStorage.setItem("jwt" ,data.data);
         notifyA(data.message);
         if(data.data){
-        navigate("/");}
+        navigate("/");}}
       }
     ).catch(err=>{console.log(err)
       ;

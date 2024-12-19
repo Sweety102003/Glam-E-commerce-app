@@ -7,7 +7,7 @@ router.post("/addaproduct", requirelogin,(req,res)=>{
 const {title,body,price,category,photo}=req.body;
 if(!title || !body || !price || !category ||! photo)
 {
-    return res.status(422).json({message:"Please enter all the fields"})
+    return res.json({message:"Please enter all the fields"})
 }
 const post= new POST({
     title,

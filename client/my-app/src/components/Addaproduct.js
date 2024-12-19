@@ -29,13 +29,13 @@ export default function Addaproduct() {
         fetch("https://api.cloudinary.com/v1_1/sweetycloud/image/upload", {
             method: "post",
             body: data
-        }).then(res => res.json()).then(data => setUrl(data.url))
+        }).then(res => res.json()).then(data => 
+            postdata(data.url))
             .catch(err => console.log(err))
     }
-    useEffect(()=>{},[pic]);
 
-    const postdata = () => {
-        if (url) {
+    const postdata = (url) => {
+        
             fetch("http://localhost:5000/addaproduct",
                 {
                     method: "post",
@@ -53,9 +53,16 @@ export default function Addaproduct() {
                         }
                     )
                 }
-            ).then(res => res.json()).then(data => notifyA("Added Successfully")
+            ).then(res => res.json()).then(data => {if(data.error){
+                notifyA(data.error)
+            }
+            
+                notifyA(data.message)
+            }
+           
+
             ).catch(err => console.log(err))
-        }
+        
     }
     return (
 
@@ -73,7 +80,13 @@ export default function Addaproduct() {
             </div>
             <input type="submit" id="btn3" value="Post a product" onClick={() => {
                 postdetails();
-                postdata();
+            
+                setTitle("");
+                setBody("");
+                setPrice("");
+                setPic("");
+                setImage("");
+                setCategory("");
             }} />
         </div>
 
