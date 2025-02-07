@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 export default function Wishlist() {
    const [data , setdata]=useState([]);
    useEffect(()=>{
-    fetch("http://localhost:5000/mywishlist",{
+    fetch(`${process.env.REACT_APP_URL}/mywishlist`,{
         method:"get",
         headers:{
             "Content-Type": "application/json",

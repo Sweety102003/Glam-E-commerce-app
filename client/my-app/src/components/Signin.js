@@ -13,7 +13,7 @@ function Signin() {
   }
   const navigate=useNavigate();
   const postdata=()=>{
-    fetch("http://localhost:5000/signin",{
+    fetch(`${process.env.REACT_APP_URL}/signin`,{
       method:"post",
       headers:{
         "Content-Type":"application/json"

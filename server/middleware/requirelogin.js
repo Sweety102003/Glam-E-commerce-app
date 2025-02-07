@@ -10,6 +10,7 @@ module.exports=async (req,res,next)=>{
         return res.status(422).json({message:"user must have logged in mien"})
     }
     const token= await authorization.replace("Bearer ","");
+    // console.log(token);
     jwt.verify(token,JWT_SECRET,(err,payload)=>{
 if(err){
     return res.json({message:"user must have logged in 2" });

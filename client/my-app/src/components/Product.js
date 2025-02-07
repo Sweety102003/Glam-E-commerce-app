@@ -6,12 +6,12 @@ export default function Product() {
   const [data, setdata] = useState([]);
   const { query } = useParams();
   useEffect(()=>{
-    fetch(`http://localhost:5000/product?q=${query}`).then(res => res.json()).then(data => setdata(data)).catch(err => console.log(err));
+    fetch(`${process.env.REACT_APP_URL}/product?q=${query}`).then(res => res.json()).then(data => setdata(data)).catch(err => console.log(err));
   },[query])
   
 
   const postdata = (productid) => {
-    fetch("http://localhost:5000/addtocart", {
+    fetch(`${process.env.REACT_APP_URL}/addtocart`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -26,7 +26,7 @@ export default function Product() {
   }
 
   const postdatatowishlist = (productid) => {
-    fetch("http://localhost:5000/wishlist", {
+    fetch(`${process.env.REACT_APP_URL}/wishlist`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",

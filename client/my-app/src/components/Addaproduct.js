@@ -32,7 +32,7 @@ export default function Addaproduct() {
 
     const postdata = (url) => {
         
-            fetch("http://localhost:5000/addaproduct",
+            fetch(`${process.env.REACT_APP_URL}/addaproduct`,
                 {
                     method: "post",
                     headers: {

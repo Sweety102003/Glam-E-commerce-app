@@ -43,7 +43,7 @@ theme: "dark",
           notifyA("invalid phone no")
           return;
         }
-    fetch("http://localhost:5000/signup",{
+    fetch(`${process.env.REACT_APP_URL}/signup`,{
       method:"post",
       headers:{
         "Content-Type":"application/json"

@@ -6,7 +6,7 @@ export default function Profile  () {
     const navigate=useNavigate();
     const [data,setdata]=useState([]);
     useEffect(()=>{
-        fetch("http://localhost:5000/user",
+        fetch(`${process.env.REACT_APP_URL}/user`,
             {
                 method :"get",
                 headers:{

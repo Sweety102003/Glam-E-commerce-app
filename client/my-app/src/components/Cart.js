@@ -5,7 +5,7 @@ export default function Cart() {
   const [data, setdata] = useState([]);
   const [sum ,setSum]=useState();
 const postdata=(productid)=>{
-  fetch("http://localhost:5000/removecart",
+  fetch(`${process.env.REACT_APP_URL}/removecart`,
 
     { method:"post",
       headers: {
@@ -20,7 +20,7 @@ const postdata=(productid)=>{
 }
   useEffect(() => {
 
-    fetch("http://localhost:5000/mycart",
+    fetch(`${process.env.REACT_APP_URL}/mycart`,
       {
         headers: {
           "Content-Type": "application/json",
